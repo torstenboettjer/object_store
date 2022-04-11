@@ -10,6 +10,14 @@ terraform {
   }
 }
 
+variable "bucket_name"      { type = string }
+variable "bucket_namespace" { type = string }
+
+variable "bucket_access_type" {
+  type    = string
+  default = "NoPublicAccess"
+}
+
 locals {}
 
 // Define the wait state for the data requests
