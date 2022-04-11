@@ -3,7 +3,7 @@
 
 # Resources
 resource "oci_objectstorage_bucket" "firstasset" {
-  compartment_id = var.compartment_id
+  compartment_id = var.config.tenancy.compartment_id
   name           = var.bucket_name
   namespace      = var.bucket_namespace
   access_type    = var.bucket_access_type
